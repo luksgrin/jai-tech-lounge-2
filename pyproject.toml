@@ -1,0 +1,20 @@
+[project]
+name = "decision-gate"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+    "accelerate>=1.15.0",
+    "httpx>=0.28.1",
+    "pillow>=13.0.0",
+    "rich>=15.0.0",
+    "torch>=2.14.1",
+    "transformers>=5.20.0",
+]
+
+[project.optional-dependencies]
+# The real-NES path (mario_nes.py). Native build; supply your own ROM.
+nes = [
+    "gym-super-mario-bros>=7.4.0",
+    "nes-py>=8.2.1",
+    "numpy>=1.26",
+]
